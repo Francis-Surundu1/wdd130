@@ -1,67 +1,62 @@
+/* Google Fonts */
 body {
-    font-family: Julius Sans One, sans-serif;
-    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
+/* Header styles */
 header {
-    background-color: #3498db;
-    color: #fff;
-}
-
-.header-container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    padding: 10px;
-  }
-
-  header img {
-    max-width: 100px;
-  }
-h1, h2, p {
-    color: var(--primary-color);
-}
-
-nav {
     display: flex;
-    justify-content: space-around;
-  }
-
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-nav.sociallinks img {
-    text-decoration: none;
-    border: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d40;
+    padding: 10px 20px;
+    color: white;
 }
 
+header img {
+    height: 60px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section */
 .hero {
     position: relative;
-    text-align: centre;
+    text-align: center;
+    color: white;
 }
 
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
+    display: block;
+    opacity: 0.85;
 }
 
 .hero h1 {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
 }
 
 .hero article {
@@ -69,63 +64,93 @@ nav.sociallinks img {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(red, green, blue, alpha);
+    width: 90%;
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
     padding: 20px;
     border-radius: 10px;
-    text-align: left;
-    max-width: 600px;
 }
 
 .hero article img {
-    float: right;
-    margin-left: 20px;
-    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+    border-radius: 8px;
 }
 
-#adventures {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    text-align: center;
-  }
+.hero article p {
+    font-size: 1rem;
+}
 
-  #adventures figure {
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    font-family: 'Merriweather', serif;
+    color: #004d40;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+/* Adventure Images */
+section img {
     margin: 10px;
-    text-align: center;
-  }
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
+/* Footer Styles */
 footer {
-    background-color: #34495e;
-    color: #fff;
+    background-color: #004d40;
+    color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 20px;
+    font-size: 0.9rem;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  footer img {
-    max-width: 30px;
-    margin-left: 10px;
-  }
-
-footer p {
-    margin: 0;
-    font-size: 14px;
+footer nav.sociallinks a {
+    margin: 0 10px;
 }
 
-nav.sociallinks {
-    margin-top: 5px;
+footer nav.sociallinks img {
+    vertical-align: middle;
+    width: 30px;
 }
 
-nav.sociallinks a {
-    margin: 0 8px;
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-nav.sociallinks img {
-    width: 25px;
-    height: auto;
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero article {
+        font-size: 0.9rem;
+    }
+
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    section img {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 10px auto;
+    }
 }
